@@ -1,0 +1,32 @@
+{
+  "name": "koa-getting-started",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sample Node.js app using Koa",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js -- "
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.0.2",
+    "leancloud-storage": "^3.0.2",
+    "leanengine": "^3.0.0",
+    "lodash": "^4.17.11",
+    "node-fetch": "^2.6.0",
+    "peer": "^0.2.10",
+    "reify": "^0.19.1",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
