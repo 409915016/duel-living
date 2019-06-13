@@ -5,9 +5,9 @@ const router = {
   post: {}
 }
 
-router.get.checkIsLogined = async ()=> {
-  this.body = {
-    logined: !!this.req.currentUser
+router.get.checkIsLogined = async (ctx)=> {
+  ctx.body = {
+    logined: !!ctx.req.currentUser 
   }
 }
 
@@ -17,17 +17,18 @@ router.post.login = async (ctx, next)=> {
 
   try {
     const host = await Host.login(username, password)
-    this.res.saveCurrentUser(host.object)
+    ctx.res.saveCurrentUser(host.object)
 
-    this.body = {
+    ctx.body = {
       host: host
     }
   } catch(err) {
-    this.body = {
-      error: err.message
+    //console.log(err.code)
+    ctx.body = {
+      error: err.rawMessage
     }
   }
-  await next();
+  next();
 }
 
 export default router

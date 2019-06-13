@@ -5,16 +5,16 @@ const router = {
   post: {}
 }
 
-router.get.fetchAllPlayers = async function() {
+router.get.fetchAllPlayers = async function(ctx) {
   const players = await Player.fetchAllPlayers()
 
-  this.body = {
+  ctx.body = {
     players: players.map(player => player.plain())
   }
 }
 
-router.post.createNewPlayer = async function() {
-  if (!req.currentUser) return this.body = {
+router.post.createNewPlayer = async function(ctx) {
+  if (!ctx.req.currentUser) return ctx.body = {
     error: 'not logined'
   }
 
