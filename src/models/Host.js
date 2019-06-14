@@ -30,7 +30,6 @@ class Host extends EventEmitter {
   }
 
   static login(username = '', password = '') {  //登录
-    console.log({username, password})
     return new Promise((resolve, reject) => {
       AV.User.logIn(username, password)
         .then(loginedHost => {
@@ -38,9 +37,7 @@ class Host extends EventEmitter {
           host.object = loginedHost //给 Host 对象加入 LeanCloud 对象
           resolve(host)
         })
-        .catch(err =>{
-          console.log(err)
-        })
+        .catch(reject)
     })
   }
 

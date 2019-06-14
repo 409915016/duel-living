@@ -23,7 +23,6 @@ router.post.login = async (ctx, next)=> {
       host: host
     }
   } catch(err) {
-    //console.log(err.code)
     ctx.body = {
       error: err.rawMessage
     }
