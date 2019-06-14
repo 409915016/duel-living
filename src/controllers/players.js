@@ -18,10 +18,10 @@ router.post.createNewPlayer = async function(ctx) {
     error: 'not logined'
   }
 
-  const title = this.request.body.title
+  const title = ctx.request.body.title
   const player = new Player(title)
 
-  this.body = {
+  ctx.body = {
     player: player.plain()
   }
 }

@@ -81,7 +81,7 @@ router.post.newDuel = async function(ctx) { //创建新的赛事 需：比赛双
     error: 'not logined' 
   }
 
-  const playersId = ctx.request.body.players
+  const playersId = Object.values(ctx.request.body.players)
 
   const players = await Promise.all( //根据 id 数组取得所有参赛方对象
     playersId.map(id => Player.fetch(id))
