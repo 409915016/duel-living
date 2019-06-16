@@ -84,7 +84,7 @@
         this.peer = new Peer(id, { //返回 实例并保存
           path: `/peer`, 
           host: location.hostname,
-          port: parseInt(location.port || '80'),
+          port: parseInt('8000'),
           token: this.$route.params.id// token 是 赛事id
         })
         this.peer.id = id
