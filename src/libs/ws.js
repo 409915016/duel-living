@@ -3,7 +3,7 @@ import { merge } from 'lodash'
 
 const sockets = new Map()
 const duels = new Map()
-const maxNodePeerNum = 100 //连接数量上限
+const maxNodePeerNum = 2 //连接数量上限
 
 export function WSServer(server) { //新建 WebSocket 实例
   const wss = new WebSocketServer({

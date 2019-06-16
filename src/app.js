@@ -26,7 +26,7 @@ const server = http.createServer()
 const wss = WebSocketServer(server)
 const peerServer = PeerServer(server)
 app.use(mount('/peer', connect(peerServer)))
-//app.use(connect(AV.express()))
+app.use(connect(AV.express()))
 app.use(bodyParser());
 app.use(etag())
 app.use(conditional())
@@ -53,13 +53,5 @@ app.use(AV.koa());
 //     console.log('Duel-Living is running')
 // })
 
-
-// router.get('/', async function(ctx) {
-//   ctx.state.currentTime = new Date();
-//   await ctx.render('./index.ejs');
-// });
-
-// 可以将一类的路由单独保存在一个文件中
-// app.use(router.routes());
 
 module.exports = app;
