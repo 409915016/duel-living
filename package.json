@@ -12,6 +12,7 @@
     "ejs": "^2.5.6",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.0",
+    "koa-conditional-get": "^2.0.0",
     "koa-connect": "^2.0.1",
     "koa-etag": "^3.0.0",
     "koa-mount": "^4.0.0",

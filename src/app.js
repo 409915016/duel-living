@@ -13,6 +13,7 @@ const bodyParser = require("koa-bodyparser");
 import http from 'http'
 import mount from 'koa-mount'
 import etag from 'koa-etag'
+import conditional from 'koa-conditional-get'
 import connect from 'koa-connect'
 import staticServe from 'koa-static'
 import { PeerServer } from './libs/peer'
@@ -25,9 +26,10 @@ const server = http.createServer()
 const wss = WebSocketServer(server)
 const peerServer = PeerServer(server)
 app.use(mount('/peer', connect(peerServer)))
+//app.use(connect(AV.express()))
 app.use(bodyParser());
 app.use(etag())
-//app.use(conditional())
+app.use(conditional())
 app.use(connect(AV.Cloud.CookieSession({ secret: 'duel-living', maxAge: 3600000, fetchUser: true })))
 app.use(staticServe(path.join(__dirname, '../assets'), {
     maxAge: 24 * 60 * 60

@@ -8,7 +8,8 @@ const maxNodePeerNum = 100 //连接数量上限
 export function WSServer(server) { //新建 WebSocket 实例
   const wss = new WebSocketServer({
     server,
-    path: '/direct' 
+    path: '/direct',
+    port: '8000' //fix cant in default port 3000
   })
 
   wss.on('connection', connection) //客户端连接操作
