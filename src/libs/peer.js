@@ -1,4 +1,5 @@
-import { ExpressPeerServer } from 'peer'
+//import { ExpressPeerServer } from 'peer'
+const PeerJSServer = require('peer').PeerServer;
 import { merge } from 'lodash'
 import fetch from 'node-fetch'
 
@@ -17,11 +18,14 @@ function parseIP(ip) { //解析 ip 地址所在地区
     }
   })
     .then(res => res.json())
-    .then(info => ({
+    .then(res => res.data) //fix return data 
+    .then(info  => ({
       country: info.country, //国家
       province: info.region, //区域
       city: info.city //城市
-    }))
+    })).catch(err =>{
+      console.log(err)
+    })
 }
 
 function connection(id) { // 路由/peer 连接过来
@@ -125,11 +129,13 @@ export const proto = {
 }
 
 export function PeerServer(server) {
-  const peerServer = ExpressPeerServer(server, {
-    debug: false
+  const peerServer = PeerJSServer({
+    port: 9000, 
+    path: '/peer', 
+    debeg: 3
   })
 
-  peerServer.path = '/peer'
+  //peerServer.path = '/peer'
   //peerServer.emit('mount', { settings: {} })
 
   peerServer
@@ -150,6 +156,6 @@ function randomElement(set) { //new Set (很多客户端 客户端id)
     n++
     if (n === pivot) rtnEl = el
   })
-
+  console.log(rtnEl)
   return rtnEl
 }

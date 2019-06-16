@@ -84,7 +84,7 @@
         this.peer = new Peer(id, { //返回 实例并保存
           path: `/peer`, 
           host: location.hostname,
-          port: parseInt('8000'),
+          port: parseInt('9000'),
           token: this.$route.params.id// token 是 赛事id
         })
         this.peer.id = id
@@ -102,7 +102,7 @@
       },
 
       connectToServer() {
-        const wsURL = `ws://${location.hostname}${(location.port ? ':' + location.port : '')}/direct`
+        const wsURL = `ws://${location.hostname}:8000/direct`
         const socket = new WebSocket(wsURL) //启用 WebSocket
 
         socket.onopen = evt => {
