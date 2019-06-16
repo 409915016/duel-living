@@ -1,8 +1,8 @@
 {
-  "name": "koa-getting-started",
+  "name": "duel-living",
   "version": "1.0.0",
   "private": true,
-  "description": "A sample Node.js app using Koa",
+  "description": "⚽ a living demo used koa2/websocket/p2p based on leancloud",
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
