@@ -22,19 +22,21 @@
  - [Why](#why)
  - [Quick start](#quick-start)
  - [FAQ](#faq)
+ - [Todo list](#todo-list)
  - [Ref](#ref)
  
 ## Why
 
 Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES2015》</a>  中的实践案例，随着时间的推移，案例中使用的 `Node.js` `Koa` `Vue` 框架和 `LeanCloud SDK` 功能有较大的更新，部分 `API` 已过时。
 
-该项目在源代码上修复了一些小问题，遵守作者原意:
+该项目在[源代码](https://github.com/iwillwen/duel-living)上修复了这些问题，遵守作者原意:
 
 - 使用 `Koa2` 作为后端
 - 使用 JavaScript `ES2015` 语法
 - 选用 `LeanCloud` 提供的开箱即用的数据存储方案
 - 着重在业务逻辑的编写，无需关心应用开发环境、部署等问题
 
+当然也有一些[遗留问题](#todo-list)
 
 ## Quick start
 
@@ -48,7 +50,7 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
     - Duel
     - Message
     - Player  添加列 `title`
-4. 使用 [API 在线测试工具](https://leancloud.cn/dashboard/apionline/index.html#!/user/) 新建默认用户
+4. 使用 [API 在线测试工具](https://leancloud.cn/dashboard/apionline/index.html#!/user/) 新建默认管理员用户：
 
 ```json
 {
@@ -73,16 +75,27 @@ yarn install
 
 登录 LeanCloud 帐号并关联当前应用：
 
-```
+```ssh
 lean login
 lean switch
 ```
+
+运行项目：
+
+```ssh
+lean up
+```
+
+访问默认的 `http://localhost:3000` 和 `http://localhost:3000/admin` 
+
 
 ## 部署
 
 #### LeanCloud 云引擎
 
-使用 `lean deploy` 命令可上传至当前应用的云引擎实例中。
+在云引擎中将体验实例 Web 组的 **Web 主机域名** 设置为你喜爱的域名 `re-duel-living.leanapp.cn`
+
+使用 `lean deploy` 命令可上传至实例中：
 
 ```
 E:\project>lean deploy
@@ -111,16 +124,32 @@ E:\project>lean deploy
 
 ### FAQ
 
-##### 部署在体验实例中，请求出现 429 Too many requests.
+##### 请求出现 429 Too many requests.
 
 由于开发版应用分配的是免费体验实例，存在[休眠策略](https://leancloud.cn/docs/leanengine_plan.html#hash633315134)和有限的硬件资源。
 
 我建议读者在**本地调试**中学习，会获得较好的体验。
 
+
+### Todo list
+
+由于未对 Node.js 有深入的了解，兼容推进过程中也遇到了一些暂时无解问题，未能按照作者原意：
+
+- [ ] [WebSocket](https://github.com/websockets/ws) 服务未能挂载在默认端口，暂为 `8000`，路径不变
+- [ ] [PeerJs](https://github.com/peers/peerjs) 服务未能挂载在默认端口，暂为 `9000`，路径不变
+
+
 ### Ref
 
-##### [LeanCloud 命令行工具 CLI 使用指南](https://leancloud.cn/docs/leanengine_cli.html)
+##### LeanCloud
 
-##### [LeanCloud 云引擎快速入门](https://leancloud.cn/docs/leanengine_quickstart.html)
+##### [命令行工具 CLI 使用指南](https://leancloud.cn/docs/leanengine_cli.html)
 
-##### [LeanCloud 数据存储开发指南 · JavaScript](https://leancloud.cn/docs/leanstorage_guide-js.html)
+##### [云引擎快速入门](https://leancloud.cn/docs/leanengine_quickstart.html)
+
+##### [数据存储开发指南 · JavaScript](https://leancloud.cn/docs/leanstorage_guide-js.html)
+
+##### Koa
+
+##### [Koa - next generation web framework for node.js](https://koajs.com/)
+
