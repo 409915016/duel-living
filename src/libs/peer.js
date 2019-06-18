@@ -156,6 +156,5 @@ function randomElement(set) { //new Set (很多客户端 客户端id)
     n++
     if (n === pivot) rtnEl = el
   })
-  console.log(rtnEl)
   return rtnEl
 }
