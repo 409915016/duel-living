@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://re-duel-living.leanapp.cn">
-    <img src="" width=800 height=426>
+    <img src="http://img.pikapika.ink/duel/duel_index.png" width=800 height=426>
   </a>
 
   <h3 align="center">Duel Living</h3>
@@ -141,15 +141,8 @@ E:\project>lean deploy
 
 ### Ref
 
-##### LeanCloud
+##### [LeanCloud 命令行工具 CLI 使用指南](https://leancloud.cn/docs/leanengine_cli.html)
 
-##### [命令行工具 CLI 使用指南](https://leancloud.cn/docs/leanengine_cli.html)
+##### [LeanCloud 云引擎快速入门](https://leancloud.cn/docs/leanengine_quickstart.html)
 
-##### [云引擎快速入门](https://leancloud.cn/docs/leanengine_quickstart.html)
-
-##### [数据存储开发指南 · JavaScript](https://leancloud.cn/docs/leanstorage_guide-js.html)
-
-##### Koa
-
-##### [Koa - next generation web framework for node.js](https://koajs.com/)
-
+##### [LeanCloud 数据存储开发指南 · JavaScript](https://leancloud.cn/docs/leanstorage_guide-js.html)
