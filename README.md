@@ -65,7 +65,7 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
 先安装 [Node.js](http://nodejs.org/) 运行环境和 [LeanCloud 命令行工具](https://leancloud.cn/docs/leanengine_cli.html)，克隆项目：
 
 ```ssh
-git clone https://e.coding.net/mather/duel-living.git
+git clone https://github.com/409915016/duel-living.git
 ```
 安装依赖：
 
