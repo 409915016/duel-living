@@ -52,7 +52,7 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
     - Player  添加列 `title`
 4. 使用 [API 在线测试工具](https://leancloud.cn/dashboard/apionline/index.html#!/user/) 新建默认管理员用户：
 
-```json
+```
 {
     username: 'admin',
     password: 'admin',
