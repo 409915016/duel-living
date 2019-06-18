@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://re-duel-living.leanapp.cn">
-    <img src="http://img.pikapika.ink/duel/duel_index.png" width=800 height=426>
+    <img src="http://img.pikapika.ink/duel/duel_index.png">
   </a>
 
   <h3 align="center">Duel Living</h3>
