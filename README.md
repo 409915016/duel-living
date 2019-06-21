@@ -42,7 +42,7 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
 
 ##### 注册 LeanCloud
 
-项目数据存储依赖 LeanCloud 提供的 LeanStorage 服务，在开发前预先创建基础数据，便于后面调试。
+项目数据存储依赖 [LeanCloud](https://avoscloud.com) 提供的 LeanStorage 服务，在开发前预先创建基础数据，便于后面调试。
 
 1. 创建 LeanCloud 帐号
 2. 创建开发版应用（建议华北区）
@@ -50,7 +50,7 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
     - Duel
     - Message
     - Player  添加列 `title`
-4. 使用 [API 在线测试工具](https://leancloud.cn/dashboard/apionline/index.html#!/user/) 新建默认管理员用户：
+4. 使用 [API 在线测试工具](https://avoscloud.com/dashboard/apionline/index.html#!/user/) 新建默认管理员用户：
 
 ```
 {
