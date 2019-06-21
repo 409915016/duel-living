@@ -1,7 +1,11 @@
 require("reify")
 var AV = require('leanengine');
 
-AV.init({
+AV.init({ 
+  // fix leancloud domain name disaster
+  // look for https://blog.avoscloud.com/6805/
+  serverURLs: 'https://avoscloud.com', 
+
   appId: process.env.LEANCLOUD_APP_ID,
   appKey: process.env.LEANCLOUD_APP_KEY,
   masterKey: process.env.LEANCLOUD_APP_MASTER_KEY
