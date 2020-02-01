@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://re-duel-living.leanapp.cn">
+  <a href="http://duel-living.avosapps.us/">
     <img src="http://img.pikapika.ink/duel/duel_index.png">
   </a>
 
@@ -20,6 +20,7 @@
 ## Table of contents
 
  - [Why](#why)
+ - [Demo](#demo)
  - [Quick start](#quick-start)
  - [FAQ](#faq)
  - [Todo list](#todo-list)
@@ -38,11 +39,16 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
 
 当然也有一些[遗留问题](#todo-list)
 
+## Demo
+
+- 访问 [duel-living.avosapps.us](http://duel-living.avosapps.us/) 预览该 demo
+- [duel-living 管理后台](http://duel-living.avosapps.us/admin) username:mather pwd:admin
+
 ## Quick start
 
 ##### 注册 LeanCloud
 
-项目数据存储依赖 [LeanCloud](https://avoscloud.com) 提供的 LeanStorage 服务，在开发前预先创建基础数据，便于后面调试。
+项目数据存储依赖 [LeanCloud](https://www.leancloud.cn/) 提供的 LeanStorage 服务，在开发前预先创建基础数据，便于后面调试。
 
 1. 创建 LeanCloud 帐号
 2. 创建开发版应用（建议华北区）
@@ -50,7 +56,7 @@ Duel Living 作为<a href="http://www.broadview.com.cn/book/3621">《实战 ES20
     - Duel
     - Message
     - Player  添加列 `title`
-4. 使用 [API 在线测试工具](https://avoscloud.com/dashboard/apionline/index.html#!/user/) 新建默认管理员用户：
+4. 使用 [API 在线测试工具](https://leancloud.cn/dashboard/apionline/index.html#!/user) 新建默认管理员用户：
 
 ```
 {
@@ -93,7 +99,7 @@ lean up
 
 #### LeanCloud 云引擎
 
-在云引擎中将体验实例 Web 组的 **Web 主机域名** 设置为你喜爱的域名 `re-duel-living.leanapp.cn`
+在云引擎中将体验实例 Web 组的 **Web 主机域名** 设置为你喜爱的域名 `duel-living.avosapps.us`
 
 使用 `lean deploy` 命令可上传至实例中：
 
