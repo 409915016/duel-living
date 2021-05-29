@@ -24,7 +24,7 @@
     "node-fetch": "^2.6.0",
     "peer": "^0.2.10",
     "reify": "^0.19.1",
-    "ws": "^7.0.0"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
